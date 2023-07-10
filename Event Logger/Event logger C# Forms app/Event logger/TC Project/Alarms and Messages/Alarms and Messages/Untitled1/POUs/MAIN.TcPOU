@@ -1,0 +1,224 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.12">
+  <POU Name="MAIN" Id="{9613bf63-e503-44e4-a90c-843af6fbfc86}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM MAIN
+VAR
+	xCreateEvents		:BOOL:=TRUE; //Init
+	
+	xRaiseAllEvents		:BOOL;
+	
+	xRaiseTempAlarm		:BOOL;
+	xConfirmTempAlarm	:BOOL;
+	xClearTempAlarm		:BOOL;
+	fTemp				:LREAL;
+	fbAlarmTempToHigh	:FB_TcAlarm;
+	eConfirmationState	:TcEventConfirmationState;
+	
+	xRaiseAlarm1		:BOOL;
+	xConfirmAlarm1		:BOOL;
+	xClearAlarm1		:BOOL;
+	fbAlarm1			:FB_TcAlarm;
+
+	xRaiseAlarm2		:BOOL;
+	xConfirmAlarm2		:BOOL;
+	xClearAlarm2		:BOOL;
+	fbAlarm2			:FB_TcAlarm;
+	
+	xRaiseAlarm3		:BOOL;
+	xConfirmAlarm3		:BOOL;
+	xClearAlarm3		:BOOL;
+	fbAlarm3			:FB_TcAlarm;
+	
+	fbTcEventLogger		:FB_TcEventLogger;
+	xConfirm			: BOOL;
+	xClear				: BOOL;
+	
+	
+	tonSendInternal		:TON;
+	xSendMsg			:BOOL;
+	iCounter			:UDINT;
+	fbMsgHelloWorld		:FB_TcMessage;
+	
+
+END_VAR
+
+    ]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[//Init - Create the events
+IF xCreateEvents THEN
+	xCreateEvents:=FALSE;
+	
+	fbAlarmTempToHigh.CreateEx(TC_EVENTS.Machine_XYZ.TempToHigh,1,0);
+	
+	fbAlarm1.CreateEx(TC_EVENTS.Machine_XYZ.Alarm_1,1,0);
+	
+	fbAlarm2.CreateEx(TC_EVENTS.Machine_XYZ.Alarm_2,1,0);
+	
+	fbAlarm3.CreateEx(TC_EVENTS.Machine_XYZ.Alarm_3,1,0);
+	
+	fbMsgHelloWorld.CreateEx(TC_EVENTS.Machine_XYZ.HelloWorldMsg,0);	
+END_IF
+
+//Raise all events
+IF xRaiseAllEvents THEN
+	xRaiseAllEvents:=FALSE;
+	xRaiseAlarm1:=TRUE;
+	xRaiseAlarm2:=TRUE;
+	xRaiseAlarm3:=TRUE;
+	xRaiseTempAlarm:=TRUE;
+	xSendMsg:=TRUE;
+END_IF
+
+//Temp Alarm
+IF xRaiseTempAlarm  THEN
+	xRaiseTempAlarm:=FALSE;
+	fTemp:=fTemp+10;
+	fbAlarmTempToHigh.ipArguments.Clear().AddLReal(fTemp);
+	fbAlarmTempToHigh.Raise(0);
+END_IF
+IF xConfirmTempAlarm THEN
+	xConfirmTempAlarm:=FALSE;
+	fbAlarmTempToHigh.Confirm(0);
+END_IF
+IF xClearTempAlarm THEN
+	xClearTempAlarm:=FALSE;
+	fbAlarmTempToHigh.Clear(0,0);
+END_IF
+
+//Alarm 1
+IF xRaiseAlarm1 THEN
+	xRaiseAlarm1:=FALSE;
+	fbAlarm1.Raise(0);
+END_IF
+IF xConfirmAlarm1 THEN
+	xConfirmAlarm1:=FALSE;
+	fbAlarm1.Confirm(0);
+END_IF
+IF xClearAlarm1 THEN
+	xClearAlarm1:=FALSE;
+	fbAlarm1.Clear(0,0);
+END_IF
+
+//Alarm 2
+IF xRaiseAlarm2 THEN
+	xRaiseAlarm2:=FALSE;
+	fbAlarm2.Raise(0);
+END_IF
+IF xConfirmAlarm2 THEN
+	xConfirmAlarm2:=FALSE;
+	fbAlarm2.Confirm(0);
+END_IF
+IF xClearAlarm2 THEN
+	xClearAlarm2:=FALSE;
+	fbAlarm2.Clear(0,0);
+END_IF
+
+//Alarm 3
+IF xRaiseAlarm3 THEN
+	xRaiseAlarm3:=FALSE;
+	fbAlarm3.Raise(0);
+END_IF
+IF xConfirmAlarm3 THEN
+	xConfirmAlarm3:=FALSE;
+	fbAlarm3.Confirm(0);
+END_IF
+IF xClearAlarm3 THEN
+	xClearAlarm3:=FALSE;
+	fbAlarm3.Clear(0,0);
+END_IF
+
+
+
+//Confirm and clear all alarms
+IF xConfirm THEN
+	xConfirm:=FALSE;
+	fbTcEventLogger.ConfirmAllAlarms(0);
+END_IF
+IF xClear THEN
+	xClear:=FALSE;
+	fbTcEventLogger.ClearAllAlarms(0,0);
+END_IF
+
+	eConfirmationState:=fbAlarmTempToHigh.eConfirmationState;
+
+//Message
+IF xSendMsg THEN
+	xSendMsg:=FALSE;
+	iCounter:=iCounter+1;
+	fbMsgHelloWorld.ipArguments.Clear().AddUDInt(iCounter);
+	fbMsgHelloWorld.Send(0);
+END_IF]]></ST>
+    </Implementation>
+    <LineIds Name="MAIN">
+      <LineId Id="49" Count="0" />
+      <LineId Id="2" Count="0" />
+      <LineId Id="20" Count="0" />
+      <LineId Id="22" Count="2" />
+      <LineId Id="119" Count="0" />
+      <LineId Id="121" Count="0" />
+      <LineId Id="123" Count="0" />
+      <LineId Id="122" Count="0" />
+      <LineId Id="120" Count="0" />
+      <LineId Id="124" Count="0" />
+      <LineId Id="25" Count="0" />
+      <LineId Id="21" Count="0" />
+      <LineId Id="284" Count="0" />
+      <LineId Id="275" Count="0" />
+      <LineId Id="277" Count="6" />
+      <LineId Id="276" Count="0" />
+      <LineId Id="28" Count="1" />
+      <LineId Id="27" Count="0" />
+      <LineId Id="30" Count="0" />
+      <LineId Id="45" Count="0" />
+      <LineId Id="33" Count="1" />
+      <LineId Id="31" Count="0" />
+      <LineId Id="138" Count="0" />
+      <LineId Id="141" Count="0" />
+      <LineId Id="143" Count="0" />
+      <LineId Id="142" Count="0" />
+      <LineId Id="137" Count="0" />
+      <LineId Id="144" Count="0" />
+      <LineId Id="146" Count="0" />
+      <LineId Id="145" Count="0" />
+      <LineId Id="154" Count="0" />
+      <LineId Id="113" Count="2" />
+      <LineId Id="117" Count="0" />
+      <LineId Id="116" Count="0" />
+      <LineId Id="156" Count="1" />
+      <LineId Id="159" Count="0" />
+      <LineId Id="158" Count="0" />
+      <LineId Id="161" Count="1" />
+      <LineId Id="164" Count="0" />
+      <LineId Id="163" Count="0" />
+      <LineId Id="155" Count="0" />
+      <LineId Id="125" Count="0" />
+      <LineId Id="127" Count="3" />
+      <LineId Id="166" Count="6" />
+      <LineId Id="131" Count="0" />
+      <LineId Id="173" Count="0" />
+      <LineId Id="132" Count="4" />
+      <LineId Id="174" Count="6" />
+      <LineId Id="126" Count="0" />
+      <LineId Id="225" Count="0" />
+      <LineId Id="227" Count="0" />
+      <LineId Id="104" Count="0" />
+      <LineId Id="65" Count="0" />
+      <LineId Id="47" Count="0" />
+      <LineId Id="70" Count="1" />
+      <LineId Id="67" Count="0" />
+      <LineId Id="74" Count="1" />
+      <LineId Id="77" Count="0" />
+      <LineId Id="76" Count="0" />
+      <LineId Id="102" Count="0" />
+      <LineId Id="46" Count="0" />
+      <LineId Id="41" Count="0" />
+      <LineId Id="37" Count="0" />
+      <LineId Id="36" Count="0" />
+      <LineId Id="48" Count="0" />
+      <LineId Id="44" Count="0" />
+      <LineId Id="38" Count="0" />
+      <LineId Id="43" Count="0" />
+      <LineId Id="39" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

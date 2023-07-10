@@ -1,0 +1,30 @@
+E:\Sampe Code Libary\Event logger\EventLoggerFormsApp\EventLoggerSample\bin\Debug\EventLoggerSample.exe.config
+E:\Sampe Code Libary\Event logger\EventLoggerFormsApp\EventLoggerSample\bin\Debug\EventLoggerSample.exe
+E:\Sampe Code Libary\Event logger\EventLoggerFormsApp\EventLoggerSample\bin\Debug\EventLoggerSample.pdb
+E:\Sampe Code Libary\Event logger\EventLoggerFormsApp\EventLoggerSample\obj\Debug\EventLoggerSample.csproj.ResolveComReference.cache
+E:\Sampe Code Libary\Event logger\EventLoggerFormsApp\EventLoggerSample\obj\Debug\EventLoggerSample.Form1.resources
+E:\Sampe Code Libary\Event logger\EventLoggerFormsApp\EventLoggerSample\obj\Debug\EventLoggerSample.Properties.Resources.resources
+E:\Sampe Code Libary\Event logger\EventLoggerFormsApp\EventLoggerSample\obj\Debug\EventLoggerSample.csproj.GenerateResource.cache
+E:\Sampe Code Libary\Event logger\EventLoggerFormsApp\EventLoggerSample\obj\Debug\EventLoggerSample.csproj.CoreCompileInputs.cache
+E:\Sampe Code Libary\Event logger\EventLoggerFormsApp\EventLoggerSample\obj\Debug\EventLoggerSample.exe
+E:\Sampe Code Libary\Event logger\EventLoggerFormsApp\EventLoggerSample\obj\Debug\EventLoggerSample.pdb
+C:\Users\CameronJ\Desktop\Event logger\Event logger\EventLoggerFormsApp\EventLoggerSample\bin\Debug\EventLoggerSample.exe.config
+C:\Users\CameronJ\Desktop\Event logger\Event logger\EventLoggerFormsApp\EventLoggerSample\obj\Debug\EventLoggerSample.csproj.ResolveComReference.cache
+C:\Users\CameronJ\Desktop\Event logger\Event logger\EventLoggerFormsApp\EventLoggerSample\obj\Debug\EventLoggerSample.exe
+C:\Users\CameronJ\Desktop\Event logger\Event logger\EventLoggerFormsApp\EventLoggerSample\obj\Debug\EventLoggerSample.pdb
+C:\Users\CameronJ\Desktop\Event logger\Event logger\EventLoggerFormsApp\EventLoggerSample\bin\Debug\EventLoggerSample.exe
+C:\Users\CameronJ\Desktop\Event logger\Event logger\EventLoggerFormsApp\EventLoggerSample\bin\Debug\EventLoggerSample.pdb
+C:\Users\CameronJ\Desktop\Event logger\Event logger\EventLoggerFormsApp\EventLoggerSample\obj\Debug\EventLoggerSample.csprojResolveAssemblyReference.cache
+C:\Users\CameronJ\Desktop\Event logger\Event logger\EventLoggerFormsApp\EventLoggerSample\obj\Debug\EventLoggerSample.Form1.resources
+C:\Users\CameronJ\Desktop\Event logger\Event logger\EventLoggerFormsApp\EventLoggerSample\obj\Debug\EventLoggerSample.Properties.Resources.resources
+C:\Users\CameronJ\Desktop\Event logger\Event logger\EventLoggerFormsApp\EventLoggerSample\obj\Debug\EventLoggerSample.csproj.GenerateResource.Cache
+E:\Sampe Code Libary\Event logger\EventLoggerFormsApp_Cam092618\EventLoggerFormsApp\EventLoggerSample\bin\Debug\EventLoggerSample.exe.config
+E:\Sampe Code Libary\Event logger\EventLoggerFormsApp_Cam092618\EventLoggerFormsApp\EventLoggerSample\bin\Debug\EventLoggerSample.exe
+E:\Sampe Code Libary\Event logger\EventLoggerFormsApp_Cam092618\EventLoggerFormsApp\EventLoggerSample\bin\Debug\EventLoggerSample.pdb
+E:\Sampe Code Libary\Event logger\EventLoggerFormsApp_Cam092618\EventLoggerFormsApp\EventLoggerSample\obj\Debug\EventLoggerSample.csproj.ResolveComReference.cache
+E:\Sampe Code Libary\Event logger\EventLoggerFormsApp_Cam092618\EventLoggerFormsApp\EventLoggerSample\obj\Debug\EventLoggerSample.Form1.resources
+E:\Sampe Code Libary\Event logger\EventLoggerFormsApp_Cam092618\EventLoggerFormsApp\EventLoggerSample\obj\Debug\EventLoggerSample.Properties.Resources.resources
+E:\Sampe Code Libary\Event logger\EventLoggerFormsApp_Cam092618\EventLoggerFormsApp\EventLoggerSample\obj\Debug\EventLoggerSample.csproj.GenerateResource.cache
+E:\Sampe Code Libary\Event logger\EventLoggerFormsApp_Cam092618\EventLoggerFormsApp\EventLoggerSample\obj\Debug\EventLoggerSample.csproj.CoreCompileInputs.cache
+E:\Sampe Code Libary\Event logger\EventLoggerFormsApp_Cam092618\EventLoggerFormsApp\EventLoggerSample\obj\Debug\EventLoggerSample.exe
+E:\Sampe Code Libary\Event logger\EventLoggerFormsApp_Cam092618\EventLoggerFormsApp\EventLoggerSample\obj\Debug\EventLoggerSample.pdb

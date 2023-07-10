@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<TcSmProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4022.25">
+	<DataTypes>
+		<DataType>
+			<Name GUID="{0987F887-2CE6-473F-A89D-FAE4E3DA45C9}" PersistentType="true">Machine_XYZ</Name>
+			<DisplayName TxtId="">
+				<![CDATA[Machine XYZ]]>
+			</DisplayName>
+			<EventId>
+				<Name Id="1">TempToHigh</Name>
+				<DisplayName TxtId="">
+					<![CDATA[Tempature to high {0}]]>
+				</DisplayName>
+				<Severity>Critical</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="2">HelloWorldMsg</Name>
+				<DisplayName TxtId="">
+					<![CDATA[Hello world {0}]]>
+				</DisplayName>
+				<Severity>Info</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="3">Alarm_1</Name>
+				<DisplayName TxtId="">
+					<![CDATA[Alarm_1]]>
+				</DisplayName>
+				<Severity>Critical</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="4">Alarm_2</Name>
+				<DisplayName TxtId="">
+					<![CDATA[Alarm_2]]>
+				</DisplayName>
+				<Severity>Warning</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="5">Alarm_3</Name>
+				<DisplayName TxtId="">
+					<![CDATA[Alarm_3]]>
+				</DisplayName>
+				<Severity>Critical</Severity>
+			</EventId>
+			<Hides>
+				<Hide GUID="{4B578A07-C223-45BF-8E84-074C476E3DCF}"/>
+				<Hide GUID="{FEEAE414-0A4E-447E-9DE5-ED63EF5EB09F}"/>
+				<Hide GUID="{5A47525D-BA3C-43FE-BAC0-E95A0D7FF61E}"/>
+				<Hide GUID="{0B086549-350B-40A2-A76D-67FF8E383358}"/>
+				<Hide GUID="{A2E17E47-078C-4BCC-88E5-2D6DCEC1EF24}"/>
+				<Hide GUID="{33BA51CB-F76B-4E1D-8954-8E6BA703B38B}"/>
+				<Hide GUID="{E09B5B34-6B0D-4CC5-9A87-A5D0064446D7}"/>
+				<Hide GUID="{1E39BD96-AAE7-49A8-A1C9-1B9C91DD9853}"/>
+				<Hide GUID="{15FD0313-3284-43CB-A658-A03DAAEC2DD2}"/>
+				<Hide GUID="{57FE538A-D585-4689-8F27-59B6401A507F}"/>
+			</Hides>
+		</DataType>
+	</DataTypes>
+	<Project ProjectGUID="{653638A1-C9B5-4F03-9133-57534CE8231C}" Target64Bit="true" ShowHideConfigurations="#x306">
+		<System>
+			<Settings MaxCpus="8" NonWinCpus="1">
+				<Cpu CpuId="7"/>
+			</Settings>
+			<Tasks>
+				<Task Id="2" Priority="20" CycleTime="100000" AmsPort="350" AdtTasks="true">
+					<Name>PlcTask</Name>
+				</Task>
+			</Tasks>
+			<TypeSystem>
+				<AdditionalTmcFile Name="MyAlarmsAndMessages" File="MyAlarmsAndMessages.tmc"/>
+			</TypeSystem>
+		</System>
+		<Plc>
+			<Project File="Untitled1.xti"/>
+		</Plc>
+	</Project>
+</TcSmProject>

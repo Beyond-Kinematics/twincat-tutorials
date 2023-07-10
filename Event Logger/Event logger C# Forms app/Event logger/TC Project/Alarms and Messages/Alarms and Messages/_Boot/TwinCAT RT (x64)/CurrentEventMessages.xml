@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TcEventSources Version="2"><Source><GUID>{0987F887-2CE6-473F-A89D-FAE4E3DA45C9}</GUID><Name LcId="1033">Machine XYZ</Name><Event><Id>1</Id><Message LcId="1033">Tempature to high {0}</Message></Event><Event><Id>2</Id><Message LcId="1033">Hello world {0}</Message></Event><Event><Id>3</Id><Message LcId="1033">Alarm_1</Message></Event><Event><Id>4</Id><Message LcId="1033">Alarm_2</Message></Event><Event><Id>5</Id><Message LcId="1033">Alarm_3</Message></Event></Source></TcEventSources>
